@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.21;
+pragma solidity ^0.8.21;
 
 interface IFluidDexFactory {
     /// @notice Global auth is auth for all dexes

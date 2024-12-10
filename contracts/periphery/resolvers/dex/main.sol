@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: BUSL-1.1
-pragma solidity 0.8.21;
+pragma solidity ^0.8.21;
 
 import { AddressCalcs } from "../../../libraries/addressCalcs.sol";
 import { DexSlotsLink } from "../../../libraries/dexSlotsLink.sol";
