@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: BUSL-1.1
-pragma solidity 0.8.21;
+pragma solidity ^0.8.21;
 
 import { Owned } from "solmate/src/auth/Owned.sol";
 
@@ -63,7 +63,7 @@ contract VaultT1Migrator is Owned {
     );
 
     event SetFlashloanConfig (
-        address indexed token, 
+        address indexed token,
         uint256 indexed route,
         uint256 amount
     );
@@ -160,7 +160,7 @@ contract VaultT1Migrator is Owned {
         FLA.flashLoan(tokens, amts, params_.route, data_, abi.encode());
 
         if (VAULT_T1_FACTORY_NEW.balanceOf(address(this)) > 0) revert FluidVaultT1Migrator__NotAllowed();
-        
+
         return this.onERC721Received.selector;
     }
 

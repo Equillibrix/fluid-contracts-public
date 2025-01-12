@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: BUSL-1.1
-pragma solidity 0.8.21;
+pragma solidity ^0.8.21;
 
 import { IFluidDexT1 } from "../../../protocols/dex/interfaces/iDexT1.sol";
 import { Structs as FluidLiquidityResolverStructs } from "../liquidity/structs.sol";

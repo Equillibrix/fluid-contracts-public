@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: BUSL-1.1
-pragma solidity 0.8.21;
+pragma solidity ^0.8.21;
 
 import { Owned } from "solmate/src/auth/Owned.sol";
 
@@ -31,7 +31,7 @@ contract VaultT1Liquidator is Owned {
     InstaFlashInterface immutable public FLA;
     IWETH9 immutable public WETH;
 
-    mapping (address => bool) public rebalancer; 
+    mapping (address => bool) public rebalancer;
 
     error FluidVaultT1Liquidator__InvalidOperation();
 
@@ -108,7 +108,7 @@ contract VaultT1Liquidator is Owned {
             emit Withdraw(to_, tokens_[i], amounts_[i]);
         }
     }
-    
+
     function liquidation(LiquidationParams memory params_) public isRebalancer {
         address[] memory tokens = new address[](1);
         uint256[] memory amts = new uint256[](1);

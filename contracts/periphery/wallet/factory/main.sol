@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: BUSL-1.1
-pragma solidity 0.8.21;
+pragma solidity ^0.8.21;
 
 import { Initializable } from "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import { OwnableUpgradeable } from "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
@@ -46,7 +46,7 @@ contract FluidWalletFactoryVariables is Initializable, OwnableUpgradeable {
     // uint256[49] private __gap; (slot 52 until slot 100)
 
     // ----------------------- slot 101 ---------------------------
-    /// @dev fluid wallet implementation address. 
+    /// @dev fluid wallet implementation address.
     /// Can be updated by owner for newer version.
     address internal _implementation;
 
